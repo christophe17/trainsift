@@ -6,8 +6,21 @@
 
 The repository is specified before any code: `README.md`, `CLAUDE.md`, the six documents of
 the reading order. The name was checked the same day (`docs/03` D1). demosift `v0.3.0` is the
-release to pin, once tagged (`~/Sites/demosift/STATE.md`, step 1). Nothing is installed,
+release to pin, once tagged (`~/Project/demosift/STATE.md`, step 1). Nothing is installed,
 nothing is measured.
+
+The question whether agents diagnose a run better than `rules` and than `model-alone` is one
+notebook of the program's private lab, run at milestone 2 on the frozen campaign (`docs/03`
+D17); the `model-alone` and graph lines of the table (`docs/06` §4) come from that notebook.
+Milestone 2 waits for none of it, and nothing in milestone 0 changes.
+
+## Specification amendments of 2026-10-16
+
+Recorded from a session in `~/Roadmaps/roadmap-research-engineer` at the author's request
+(`JOURNAL.md`, same date): milestones 1 and 2 gain a discrepancy log and two paper drafts as
+deliverables (D18); a milestone 2B, the LLM post-training adapter and its fault family, is
+written as a skeleton (D19); the stale `~/Sites/demosift` path is fixed to `~/Project/demosift`.
+Nothing in milestone 0 changes; nothing is open.
 
 ## Next steps, in order
 

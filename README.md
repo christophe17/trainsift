@@ -12,8 +12,9 @@ culprit. No model, no agent, no cloud account.
 
 demosift sifts the demonstrations before you train; trainsift sifts the training after.
 [demosift](https://github.com/christophe17/demosift) is this platform's first dependency and its
-gate. A hosted diagnostician that reads bundles and explains them, with sources, is being built
-at `trainsift.io` (not open yet); it runs this package and lives in its own repository.
+gate. One measured question sits beside the benchmark: whether agents name a run's cause
+better than a rule set and than a single model call. It is answered in the program's private
+lab notebook, scored on this benchmark like any other submission (`docs/03` D17).
 
 ## Measured numbers
 
@@ -58,16 +59,16 @@ A bundle is a directory: a manifest (versions, git SHA, dataset id and revision,
 inspection, the resolved config and its hash, the seed, the hardware), a metrics table in
 parquet, an events log, evaluation results per checkpoint, references to the checkpoints, the
 frozen environment, and redacted logs. It is what the analyzers read, what the fault suite
-produces, what the hosted instance accepts, and what a third party submits to be scored. The
+produces, what a diagnostic method reads, and what a third party submits to be scored. The
 contract is in [docs/04-run-bundle.md](docs/04-run-bundle.md).
 
 ## What this repository does not do
 
-It calls no model, runs no agent, serves no HTTP, provisions no GPU, and deploys nothing. The
-diagnostician that explains a run belongs to the hosted instance, which imports this package
-and adds agents, a corpus, sign-in, a quota and the infrastructure around them. Keeping them
-out is what makes the platform testable to the last digit, and its fault suite an honest
-benchmark for any method, including the hosted instance's own.
+It calls no model, runs no agent, serves no HTTP, provisions no GPU, and deploys nothing.
+Anything that reasons over a run with a model, one call or a graph of agents, imports this
+package from outside and is scored by it like any third party ([docs/06](docs/06-scoring-protocol.md)).
+Keeping that out is what makes the platform testable to the last digit, and its fault suite
+an honest benchmark for any method, including the author's own.
 
 ## Repository layout (target)
 

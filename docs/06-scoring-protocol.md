@@ -53,8 +53,8 @@ can escalate; the same reason as tinct's.
 | Baseline | Where | What it is |
 |---|---|---|
 | `rules` | This repository, `score.rules` | A deterministic rule set over findings: fixed precedence of finding ids to categories and scenarios, no model. The first line of every table |
-| `model-alone` | `trainsift-web` | One model given the bundle's Markdown rendering and the finding list as text, no tools, no corpus, one call. The answer to "why not just ask a model" |
-| The graph | `trainsift-web` | The hosted instance's method, scored exactly as a third party's |
+| `model-alone` | The program's private lab notebook (`docs/03` D17), outside this repository | One model given the bundle's Markdown rendering and the finding list as text, no tools, no corpus, one call. The answer to "why not just ask a model" |
+| A graph of agents | The same notebook | Agents over the findings as tool results, adding nothing to them. The question D17 keeps, whether agents name the cause better than `rules` and than `model-alone`, answered with N = 10 runs and the comparison rule of §3, and scored exactly as a third party's |
 
 The `rules` baseline is versioned like any method; a change to it is replayed on the frozen
 campaign and journaled before release (`docs/02`, "Replay before change").
@@ -69,7 +69,7 @@ request, with the submission's artefacts linked; nothing more is promised at `v1
 ## 6. What is not scored
 
 The quality of an explanation, the usefulness of a proposed fix, the faithfulness of a report
-to its evidence: these are properties of a product, measured by the hosted instance with a
-judge calibrated against human grades and with a faithfulness check
-(`~/Sites/trainsift-web/docs/06-evaluation.md`). The protocol scores one thing, whether the
+to its evidence: these are properties of a product. Measuring them would take a judge
+calibrated against human grades and a faithfulness check, and the program has no such
+instrument (`docs/03` D17). The protocol scores one thing, whether the
 cause was named, so that its number means one thing.

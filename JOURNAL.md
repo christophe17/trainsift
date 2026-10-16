@@ -4,9 +4,8 @@ Dated history. Every number quoted elsewhere points to an entry here.
 
 ## 2026-09-29 — Repository created and specified
 
-- Repository created at `~/Sites/trainsift`, specified before any code: README, working rules,
-  and the six documents of the reading order. Its sibling, the hosted diagnostician, was
-  created and specified the same day at `~/Sites/trainsift-web`.
+- Repository created at `~/Sites/trainsift` (since moved to `~/Project/trainsift`), specified
+  before any code: README, working rules, and the six documents of the reading order.
 - The idea was chosen over a multi-agent financial-markets assistant and over a ROS 2
   troubleshooting assistant, both examined in the same conversation. The criterion that
   decided: coherence with the author's three existing projects and no diversion from the
@@ -21,3 +20,40 @@ Dated history. Every number quoted elsewhere points to an entry here.
   name; the only homonym on the web is a script file in an unrelated student repository.
   `faultsift` and `policysift` were also free and kept as fallbacks. Recorded as D1.
 - Nothing installed, nothing measured, no GPU rented.
+
+## 2026-10-15 — The agent comparison placed in the program's private lab (D17)
+
+- The comparison `rules` against `model-alone` against a graph of agents on the frozen
+  campaign is one notebook of the program's private lab at milestone 2, N = 10 runs, bootstrap
+  intervals, scored with `score_diagnoses` like a third party's submission. Recorded as D17.
+  What the program has no instrument for: a corpus, a calibrated judge of explanations, a
+  faithfulness check — properties of a product, not of the benchmark (`docs/06` §6).
+- Touched: `CLAUDE.md` §2, §3 and rule 1; `README.md`; `STATE.md`; `docs/01` §1, §2 and §6;
+  `docs/02` definition of done; `docs/04` §1 and the redaction paragraph; `docs/05` §8;
+  `docs/06` §4 and §6. No code, nothing measured, no GPU rented.
+
+## 2026-10-16 — Papers as deliverables, a milestone 2B skeleton, a path fixed (D18, D19)
+
+- Recorded from a session in `~/Roadmaps/roadmap-research-engineer`, at the author's request,
+  the day after that repository was specified. This repository is that roadmap's research
+  vehicle: its module R0.2 is milestone 1 written as a reproducibility paper, its R0.4 is
+  milestone 2 written as an evaluation-benchmark paper with the D17 comparison as the ablation
+  section, its R1.4 is a new milestone 2B, an LLM post-training adapter with a
+  `TRAINSIFT-LLM-*` fault family, written here as a skeleton. The reason the edits are made
+  now rather than when that roadmap opens: trainsift opens first, and a discrepancy log is kept
+  during a reproduction, not reconstructed after it.
+- Touched: `docs/02` milestones 1, 2, new 2B, the definition of done, the exclusions;
+  `docs/03` D18 and D19; `CLAUDE.md` §2 (one bullet) and §3 (path); `STATE.md` (one section);
+  this file. `~/Sites/demosift` → `~/Project/demosift` wherever it appeared: both packages
+  live under `~/Project/`. No code, nothing measured, no GPU rented, nothing open.
+
+## 2026-10-16 — The documents consolidated: the benchmark, the lab notebook, nothing else
+
+- At the author's request, from a session in `~/Roadmaps/roadmap-research-engineer`: the
+  documents of this repository no longer refer to any hosted product over the platform. The
+  diagnostician question lives in the program's private lab notebook (D17) and nowhere else;
+  D2, D3, D6, D11, D14 and D17 are reworded to their outcome, `CLAUDE.md` §2, `README.md`,
+  `STATE.md`, `docs/01` §6, `docs/05` §8, `docs/06` §6 and the earlier entries of this file
+  follow. The program's production project is `~/Project/sherpapier`, unrelated to this
+  platform (program board, `~/Roadmaps/roadmap-robotics/docs/09`). No code, nothing measured,
+  no GPU rented, nothing open.

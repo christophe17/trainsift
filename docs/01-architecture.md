@@ -7,9 +7,10 @@ is marked and carries its decision reference.
 
 A **training platform** for robot-learning policies whose every output is reproducible and
 measured, and a **benchmark for diagnostic methods** built on top of it. Everything here is
-deterministic code or batch computation: no model call, no agent, no server. The one place a
-model's judgement is needed, explaining a run to a person, is the hosted instance's job
-(`~/Sites/trainsift-web`), and it does it with this library's functions as tools.
+deterministic code or batch computation: no model call, no agent, no server. Where a model's
+judgement enters, naming a cause from the findings, it enters outside this repository: in the
+program's private lab notebook at milestone 2 (`docs/03` D17), or in a third party's method,
+each scored here like any other.
 
 The reason the two halves live in one package: the fault suite needs the platform to produce
 faulted runs, and the platform needs the analyzers to be honest about its own runs. They share
@@ -31,7 +32,7 @@ package.
                                               │
   the fault suite ──▶ faulted runs ──▶ bundles + sealed answers ──▶ score: any method's diagnoses ──▶ accuracy with intervals
                                                                               ▲
-                                     `rules` (here) · `model-alone`, the graph (trainsift-web) · third parties
+                                     `rules` (here) · `model-alone`, a graph of agents (the lab notebook, D17) · third parties
 ```
 
 Two flows over one artefact. The **run flow** turns a dataset and a config into a bundle, then
@@ -101,16 +102,18 @@ episodes, seeds) -> EvalResult`, `export_onnx(bundle, checkpoint) -> Path`, `app
 scenario) -> config`. Every model is Pydantic; `model_dump(mode="json")` is the storable form.
 This surface is a contract (`CLAUDE.md` §4.13).
 
-## 6. How a deployment uses it
+## 6. How a caller uses it
 
-The hosted instance imports the package pinned by tag. Its analyzers run in a Lambda that
-calls `read_bundle` and `analyze_bundle` with no model; its agents receive the findings as
-tool results and add nothing to them; its baseline `model-alone` and its graph are scored with
-`score_diagnoses` on the published campaign, exactly as a third party would be. If the
-instance ever needs a new fact about a run, the fact is added here, tested here, released
-here, and the pin is bumped there. That rule is the same as demosift's D12 and demosift-web's
-D16, and it is what keeps the benchmark honest: the method being scored cannot move the
-scorer.
+Any caller, the program's private lab notebook or a third party's method, imports the package
+pinned by tag. It calls `read_bundle` and
+`analyze_bundle` with no model; whatever reasons over the findings, a rule set, one model
+call, a graph of agents, receives them as they are and adds nothing to them; its diagnoses
+are scored with `score_diagnoses` on the published campaign, exactly as a third party's. If a
+caller ever needs a new fact about a run, the fact is added here, tested here, released
+here, and the pin is bumped there. That rule is the same as demosift's D12, and it is what
+keeps the benchmark honest: the method being scored cannot move the scorer. Since D17 the
+first such caller is the lab notebook of milestone 2, which produces the `model-alone` and
+graph lines of the table (`docs/06` §4).
 
 ## 7. Where the library goes next
 

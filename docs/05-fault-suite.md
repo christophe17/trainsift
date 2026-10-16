@@ -110,6 +110,6 @@ version.
 ## 8. What the suite does not test
 
 Whether a policy is good. Whether a method's explanation is well written. Whether a fix works.
-The first is the harness's number; the last two are the hosted instance's evaluations, which
-it measures with other instruments (`~/Sites/trainsift-web/docs/06-evaluation.md`). The suite
-answers one question only: given a run with a known injected cause, does the method name it.
+The first is the harness's number. The last two are properties of a product; no instrument in
+the program measures them, and no number about them is published (`docs/03` D17). The suite answers one question only: given a run with a known
+injected cause, does the method name it.

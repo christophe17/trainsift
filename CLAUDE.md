@@ -13,13 +13,18 @@ against, including on a **fault suite** whose answers are known.
 
 - **demosift sifts the demonstrations before training; trainsift sifts the training after.**
   The two are siblings with the same shape: a public, deterministic package that computes the
-  facts, and a hosted instance in its own repository (`trainsift-web`) that puts an agent over
-  them. Nothing here calls a model.
+  facts; whatever reasons over them with a model lives outside and is measured against them
+  (`docs/03` D17). Nothing here calls a model.
 - **This repository is the phase 4 deliverable of the author's roadmap**
   (`~/Roadmaps/roadmap-robotics/roadmaps/01-roadmap-core.md`): "a robot-learning training
   platform as a standalone repo — data ingestion and versioning, configured and reproducible
   distributed training, an evaluation harness, and a deployment path". It is not a third
   project next to that one; it *is* that one.
+- **This repository is also the research vehicle of the author's Research Engineer roadmap**
+  (`~/Roadmaps/roadmap-research-engineer`, since 2026-10-16): its modules R0.2 (reproduction),
+  R0.4 (writing) and R1.4 (the LLM adapter) are milestones 1, 2 and 2B of this repository seen
+  from the learner's side (D18, D19). That roadmap re-teaches nothing from here and points at
+  these documents instead.
 - **The fault suite is the method of tinct's Culprit applied to training runs**
   (`~/Project/tinct/docs/06-level2-faults-agent.md`): a fault is a versioned scenario with
   explicit parameters, applied without the rest of the pipeline knowing, verified as applied,
@@ -33,14 +38,14 @@ against, including on a **fault suite** whose answers are known.
   done.
 - **Everything is in English**: code, comments, docs, commit messages, issues.
 - **Bought conventions.** Quality rules, CI shape and release pipeline are inherited from
-  demosift (`~/Sites/demosift`), which inherited them from `cgp-ai`; the domain is new.
+  demosift (`~/Project/demosift`), which inherited them from `cgp-ai`; the domain is new.
 
 ## 3. Reading order
 
-demosift is checked out at `~/Sites/demosift`; its `CLAUDE.md` and `docs/01` are read before
+demosift is checked out at `~/Project/demosift`; its `CLAUDE.md` and `docs/01` are read before
 touching the data module, because demosift is this platform's first dependency and its gate.
 
-1. `docs/01-architecture.md` — what the platform is and is not, its modules, its public surface, the run bundle, how the hosted instance uses it
+1. `docs/01-architecture.md` — what the platform is and is not, its modules, its public surface, the run bundle, how a caller uses it
 2. `docs/02-milestones.md` — milestones, how the platform proves itself, what is excluded
 3. `docs/03-decisions.md` — decision log
 4. `docs/04-run-bundle.md` — the bundle contract: what a run records, its bounds, its redaction
@@ -55,7 +60,8 @@ decisions) and `JOURNAL.md` (dated history) before answering.
 1. **No model, no agent, no cloud account.** The library calls no language or vision model,
    provisions nothing, and reaches nothing but `huggingface.co` and the machine it runs on. A
    GPU is rented by the author and used through the command line; the repository never holds
-   a credential for it. The diagnostician lives in `trainsift-web`.
+   a credential for it. A diagnostician that calls a model lives outside this repository: the
+   program's private lab notebook at milestone 2 (D17), or a third party's submission.
 2. **Audit before training.** A run starts by inspecting its dataset with the pinned demosift
    release; the inspection is stored in the bundle. A failing check blocks the run unless the
    override flag is passed, and the override is recorded in the bundle. Silent training on
