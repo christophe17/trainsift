@@ -55,5 +55,11 @@ Dated history. Every number quoted elsewhere points to an entry here.
   D2, D3, D6, D11, D14 and D17 are reworded to their outcome, `CLAUDE.md` §2, `README.md`,
   `STATE.md`, `docs/01` §6, `docs/05` §8, `docs/06` §6 and the earlier entries of this file
   follow. The program's production project is `~/Project/sherpapier`, unrelated to this
-  platform (program board, `~/Roadmaps/roadmap-robotics/docs/09`). No code, nothing measured,
+  platform (program board, `~/Roadmaps/program/docs/08`). No code, nothing measured,
   no GPU rented, nothing open.
+
+## 2026-10-16 — Program pointers
+
+- The program's steering repository exists since today (`~/Roadmaps/program`): the private lab
+  D17 refers to is described in its `docs/03` §5, the board is its `docs/08`. D17's pointer and
+  the entry above updated accordingly; nothing else changed.
