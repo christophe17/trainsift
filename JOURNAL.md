@@ -63,3 +63,18 @@ Dated history. Every number quoted elsewhere points to an entry here.
 - The program's steering repository exists since today (`~/Roadmaps/program`): the private lab
   D17 refers to is described in its `docs/03` §5, the board is its `docs/08`. D17's pointer and
   the entry above updated accordingly; nothing else changed.
+
+## 2026-10-18 — Ablations, the training step under the profiler, LLM reference runs (D20–D23)
+
+- Recorded from a session in `~/Roadmaps/program`, at the author's request ("oui fait tout
+  ça"), after a review of this repository against its role as the proof of the Research
+  Engineer craft (program PD-12, PD-15). The review found the measurement craft complete —
+  reproduction with a discrepancy log, sealed answers, frozen protocol, baseline first,
+  bootstrap — and three gaps: no experiment on a model's own design; training performance
+  measured without a profile; the LLM milestone using post-training only as a fault substrate.
+  The Research Engineer roadmap already held the matching work (R0.3, R1.1, R2.1–R2.3) outside
+  this repository; the amendments link it here rather than duplicate it.
+- Touched: `docs/03` D20–D23; `docs/02` milestones 1, 2B and 3, proof 8, the definition of
+  done; `docs/04` §3 (`throughput/mfu`); `STATE.md` (the demosift pin is tagged; one section);
+  this file. No code, nothing measured, no GPU rented, nothing open.
+

@@ -46,8 +46,8 @@ answers live in the campaign, sealed.
 
 `metrics.parquet` is long-form: one row per `(step, split, name)`. Names are the framework's,
 mapped to a small canonical set the analyzers know (`loss`, `loss/<component>`, `lr`,
-`grad_norm`, `eval/success_rate`, `throughput/samples_per_s`), with the raw name kept in a
-column. `events.jsonl` is append-only; each line has `time`, `step`, `kind`, `data`. The fault
+`grad_norm`, `eval/success_rate`, `throughput/samples_per_s`, and from milestone 3
+`throughput/mfu`, D21), with the raw name kept in a column. `events.jsonl` is append-only; each line has `time`, `step`, `kind`, `data`. The fault
 hooks write nothing to either: their silence is the point.
 
 ## 4. Bounds and redaction

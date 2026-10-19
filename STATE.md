@@ -6,7 +6,7 @@
 
 The repository is specified before any code: `README.md`, `CLAUDE.md`, the six documents of
 the reading order. The name was checked the same day (`docs/03` D1). demosift `v0.3.0` is the
-release to pin, once tagged (`~/Project/demosift/STATE.md`, step 1). Nothing is installed,
+release to pin; it was tagged on 2026-09-30 (`~/Project/demosift/STATE.md`). Nothing is installed,
 nothing is measured.
 
 The question whether agents diagnose a run better than `rules` and than `model-alone` is one
@@ -21,6 +21,16 @@ Recorded from a session in `~/Roadmaps/roadmap-research-engineer` at the author'
 deliverables (D18); a milestone 2B, the LLM post-training adapter and its fault family, is
 written as a skeleton (D19); the stale `~/Sites/demosift` path is fixed to `~/Project/demosift`.
 Nothing in milestone 0 changes; nothing is open.
+
+## Specification amendments of 2026-10-18
+
+Recorded from a session in `~/Roadmaps/program` at the author's request (`JOURNAL.md`, same
+date), to make the repository a fuller proof of the Research Engineer craft: milestone 1
+reproduces the papers' own ablations after the headline numbers, and module R0.3's
+pre-registered study runs on this harness (D20); milestone 3 profiles the training step and
+records MFU, parallelism beyond DDP staying in the Research Engineer roadmap's R2 (D21);
+milestone 2B starts with clean post-training runs scored on a standard benchmark (D22); D16's
+last sentence retired (D23). Nothing in milestone 0 changes; nothing is open.
 
 ## Next steps, in order
 
